@@ -1,6 +1,6 @@
 module(..., package.seeall)
 
-
+-- олоо
 function new ()
 local localGroup = display.newGroup()
 
