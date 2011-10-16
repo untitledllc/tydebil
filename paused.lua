@@ -1,6 +1,6 @@
 module(..., package.seeall)
 
--- олоо
+-- Проверка нового репозитария
 function new ()
 local localGroup = display.newGroup()
 
