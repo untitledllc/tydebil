@@ -14,7 +14,7 @@ function new()
     background.yScale = display.viewableContentHeight/background.contentHeight
 	localGroup:insert(background)
 	
-local title=display.newText("Дотронься до компьютерной мыши.", 40, 50, native.systemFont, 15 )
+local title=display.newText("Р”РѕС‚СЂРѕРЅСЊСЃСЏ РґРѕ РєРѕРјРїСЊСЋС‚РµСЂРЅРѕР№ РјС‹С€Рё.", 40, 50, native.systemFont, 15 )
 title.x= title.contentWidth/2
 title.y= (display.contentHeight - display.viewableContentHeight)/2 + title.contentHeight*1/2
 	title:setTextColor ( 50, 50, 255)

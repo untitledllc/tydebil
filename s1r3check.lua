@@ -39,7 +39,7 @@ text.y = pic1.y - text.contentHeight*3/4- pic1.contentHeight/2
 localGroup:insert(text)
 
 local textZ = display.newText( " " , 0, 0, native.systemFont, 18 )
-textZ.text = "Touch the male to continue..." 
+textZ.text = "Touch the pae to continue..." 
 textZ:setTextColor(0, 0, 0)
 textZ.x= display.viewableContentWidth/2
 textZ.y = ( display.contentHeight - display.viewableContentHeight)/2 + display.viewableContentHeight/2

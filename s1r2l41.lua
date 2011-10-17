@@ -20,13 +20,13 @@ local background=display.newImage("image/bg.png")
 localGroup:insert(background)
 	
 	
-local title=display.newText("Be more attentive", 50, 20, native.systemFont, 24 ) 
+local title=display.newText("Будте внимательнее", 50, 20, native.systemFont, 24 ) 
 title.x= display.contentWidth/2
 title.y= display.contentHeight/2 -- title.contentHeight*1/2
 	title:setTextColor ( 100, 150, 100)
 	localGroup:insert(title)
 	
-local title1=display.newText("Touch the screen", 50, 20, native.systemFont, 12 ) 
+local title1=display.newText("Для продолжения нажмите на экран.", 50, 20, native.systemFont, 12 ) 
 title1.x= display.contentWidth/2
 title1.y= title.y + title.contentHeight/2 + title1.contentHeight/2
 title1:setTextColor ( 10, 10, 0)

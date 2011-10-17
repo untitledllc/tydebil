@@ -20,7 +20,7 @@ local background=display.newImage("image/bg.png")
 localGroup:insert(background)
 	
 	
-local title=display.newText("Add numbers, what result?", 50, 20, native.systemFont, 19 ) 
+local title=display.newText("Нажи на самый большой квадратный алмаз.", 50, 20, native.systemFont, 19 ) 
 title.x= title.contentWidth/2
 title.y= (display.contentHeight - display.viewableContentHeight)/2 + title.contentHeight*1/2
 title:setTextColor ( 50, 50, 255)
@@ -35,7 +35,7 @@ duck1.x=  display.viewableContentWidth*1/25+duck1.contentWidth
 duck1.y= ( display.contentHeight - display.viewableContentHeight)/2 + display.viewableContentHeight*1/4
 localGroup:insert(duck1)
 
-local duck2 = display.newImage("image/3/level2/SK1.jpg")  -- ����� �������
+local duck2 = display.newImage("image/3/level2/SK1.jpg")  --
 duck2.xScale =1.6 * display.viewableContentWidth/ display.viewableContentHeight* 0.7
 duck2.yScale =1.54 * display.viewableContentWidth/ display.viewableContentHeight * 0.7
 duck2.x=  display.viewableContentWidth*1/4

@@ -1,6 +1,7 @@
 display.setStatusBar (display.HiddenStatusBar)
 --> Hides the status bar
 
+S1Besttime =1.11
 local director = require ("director")
 --local stack = require ("stack")
 --> Imports director

@@ -5,10 +5,60 @@ local globalGroup = display.newGroup()
 -- Значение переменных перед началом секции:
 checkPointWindow = "s1r1l1" 
 checkPointNum = 3
+BestTime=0.0
 
+local test
+function LoadBestTime ()
+local path = system.pathForFile( "data.txt", system.DocumentsDirectory )
+ 
+-- io.open opens a file at path. returns nil if no file found
+local file = io.open( path, "r" )
+if file then
+   -- read all contents of file into a string
+   local contents = file:read( "*a" )
+   print (contents) 
+   
+   local n = string.find (contents,"BestTime1 =")
+   print (n)
+   if n ~= nil then
+    test = string.sub (contents,n+11,n+15)
+	BestTime = test
+	
+   end
+   io.close( file )
+else
+   -- create file b/c it doesn't exist yet
+   file = io.open( path, "w" )
+   file:write( "BestTime1 = 0.0" )
+   io.close( file )
+end
+end
 
-
-
+--- не дописана
+local function SaveBestTime ()
+local path = system.pathForFile( "data.txt", system.DocumentsDirectory )
+ 
+-- io.open opens a file at path. returns nil if no file found
+local file = io.open( path, "r" )
+if file then
+   -- read all contents of file into a string
+   local contents = file:read( "*a" )
+   print (contents) 
+   
+   local n = string.find (contents,"BestTime1 =")
+   print (n)
+   if n ~= nil then
+    
+	
+   end
+   io.close( file )
+else
+   -- create file b/c it doesn't exist yet
+   file = io.open( path, "w" )
+   file:write( "BestTime1 = 0.0" )
+   io.close( file )
+end
+end
 -------- Times ----------------- 
 local pauseflag=true -- Будет проставлен true. Фальсить нужно будет при переходе на 1 уровень.
 
@@ -37,7 +87,9 @@ local clockTimer = timer.performWithDelay( 100, tik_tak, -1 )
 ------- Times close ---------------
 
 function timeStop()
+print ("time stop")
 	pauseflag=true
+	print (pauseflag)
    textTime.isVisible=false
 end
 

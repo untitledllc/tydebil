@@ -20,7 +20,7 @@ local background=display.newImage("image/bg.png")
 localGroup:insert(background)
 	
 	
-local title=display.newText("From the smallest to the biggest, touch numbers,\n according on their size", 50, 20, native.systemFont, 14 ) -- почему не отображает русс яз.???
+local title=display.newText("РћС‚ СЃР°РјРѕРіРѕ РјР°Р»РµРЅСЊРєРѕРіРѕ РґРѕ СЃР°РјРѕРіРѕ Р±РѕР»СЊС€РѕРіРѕ,\n РєРѕСЃРЅРёСЃСЊ С‡РёСЃРµР», РѕСЃРЅРѕРІС‹РІР°СЏСЃСЊ РЅР° РёС… СЂР°Р·РјРµСЂРµ", 50, 20, native.systemFont, 14 ) -- почему не отображает русс яз.???
 title.x= title.contentWidth/2
 title.y= (display.contentHeight - display.viewableContentHeight)/2 + title.contentHeight*1/2
 	title:setTextColor ( 50, 50, 255)

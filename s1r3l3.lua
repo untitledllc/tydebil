@@ -20,7 +20,7 @@ background.x= display.viewableContentWidth/2
 localGroup:insert(background)
 	
 	
-local title=display.newText("Сломай яйца с лева направо.", 40, 50, native.systemFont, 17 )
+local title=display.newText("РЎР»РѕРјР°Р№ СЏР№С†Р° РїРѕРїРѕСЂСЏРґРєСѓ СЃР»РµРІР° РЅР°РїСЂР°РІРѕ.", 40, 50, native.systemFont, 17 )
 title.x= title.contentWidth/2
 title.y= (display.contentHeight - display.viewableContentHeight)/2 + title.contentHeight*1/2
 	title:setTextColor ( 50, 50, 255)

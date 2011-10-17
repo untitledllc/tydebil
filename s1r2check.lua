@@ -5,7 +5,7 @@ function new ()
 local localGroup = display.newGroup()
 
 
-stack.checkPointWindow="s1r2check" -- Записали в кучу
+stack.checkPointWindow="s1r2check" -- Р—Р°РїРёСЃР°Р»Рё РІ РєСѓС‡Сѓ
 print(stack.checkPointWindow)
 
 
@@ -17,25 +17,26 @@ background.xScale = display.contentWidth/background.contentWidth
 background.yScale = display.contentHeight/background.contentHeight
 localGroup:insert(background)
 
-local pic1 = display.newImage ("image\\checkpoint\\very_good.jpg",0  ,0 )
+local pic1 = display.newImage ("image/checkpoint/very_good.jpg",0  ,0 )
 pic1.xScale = 2
 pic1.yScale = 2  
 pic1.x= display.viewableContentWidth/2
 pic1.y= ( display.contentHeight - display.viewableContentHeight)/2 + display.viewableContentHeight/2 - pic1.contentHeight 
 localGroup:insert(pic1)
 
-local pic2 = display.newImage ("image\\checkpoint\\сheckpoint.png",0  ,0 )  -- почемуто не отображается ???? Бред
-pic2.xScale = 2
-pic2.yScale = 2
+local pic2 = display.newText( "Checkpoint " , 0, 0, native.systemFont, 24 ) -----------display.newImage ("image/checkpoint/СЃheckpoint.png",0  ,0 )  -- РїРѕС‡РµРјСѓС‚Рѕ РЅРµ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ ???? Р‘СЂРµРґ
+--pic2.xScale = 2
+--pic2.yScale = 2
+pic2:setTextColor(2550,0,0)
 pic2.x= display.viewableContentWidth/2 
 pic2.y = ( display.contentHeight - display.viewableContentHeight)/2 + pic2.contentHeight/2 
 localGroup:insert(pic2)
 
 local text = display.newText( " " , 0, 0, native.systemFont, 18 )
-text.text = "You completed the second round." 
+text.text = "You completed the first round.\n Now we can confidently say.." 
 text:setTextColor(0, 0, 0)
 text.x= display.viewableContentWidth/2
-text.y = pic1.y - text.contentHeight*3/4- pic1.contentHeight/2
+text.y = pic1.y - text.contentHeight
 localGroup:insert(text)
 
 local textZ = display.newText( " " , 0, 0, native.systemFont, 18 )

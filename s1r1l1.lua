@@ -19,6 +19,7 @@ background.yScale = display.viewableContentHeight/background.contentHeight
 
 localGroup:insert(background)
 
+
 local title = display.newText( "Нажми красную кнопку для продолжения.",40, 50, native.systemFont, 18 )
 title:setTextColor ( 168, 0, 0)
 title.x= title.contentWidth/2
@@ -27,24 +28,24 @@ localGroup:insert(title)
 
 
 local buttonred=display.newImage("image/level1/red.png")
-buttonred.x=math.random(buttonred.contentWidth/2,  display.viewableContentWidth-buttonred.contentWidth/2)
-buttonred.y=math.random(title.y+title.contentWidth/2, (display.contentHeight - display.viewableContentHeight)/2+display.viewableContentHeight - buttonred.contentWidth/2 )
+buttonred.x=math.random(buttonred.contentWidth/2,  display.viewableContentWidth/2-buttonred.contentWidth/2)
+buttonred.y=math.random(title.y+title.contentHeight/2, (display.contentHeight - display.viewableContentHeight)/2+display.viewableContentHeight/2 - buttonred.contentHeight/2 )
 localGroup:insert(buttonred)
 
 local buttonblue=display.newImage("image/level1/blue.png")
-buttonblue.x=math.random(buttonblue.contentWidth/2,  display.viewableContentWidth-buttonblue.contentWidth/2)
-buttonblue.y=math.random(title.y+title.contentWidth/2, (display.contentHeight - display.viewableContentHeight)/2+display.viewableContentHeight - buttonblue.contentWidth/2)
+buttonblue.x=math.random(buttonblue.contentWidth/2,  display.viewableContentWidth/2-buttonblue.contentWidth/2)
+buttonblue.y=math.random(title.y+title.contentHeight/2+display.contentHeight/2, (display.contentHeight - display.viewableContentHeight)/2+display.viewableContentHeight - buttonblue.contentHeight/2)
 localGroup:insert(buttonblue)
 
 
 local buttongreen=display.newImage("image/level1/green.png")
-buttongreen.x=math.random(buttongreen.contentWidth/2,  display.viewableContentWidth-buttongreen.contentWidth/2)
-buttongreen.y=math.random(title.y+title.contentWidth/2, (display.contentHeight - display.viewableContentHeight)/2+display.viewableContentHeight - buttongreen.contentWidth/2)
+buttongreen.x=math.random(buttongreen.contentWidth/2+display.viewableContentWidth/2,  display.viewableContentWidth-buttongreen.contentWidth/2)
+buttongreen.y=math.random(title.y+title.contentHeight/2, (display.contentHeight - display.viewableContentHeight)/2+display.viewableContentHeight/2 - buttongreen.contentHeight/2)
 localGroup:insert(buttongreen)
 
 local buttonorange=display.newImage("image/level1/orange.png")
-buttonorange.x=math.random(buttonorange.contentWidth/2,  display.viewableContentWidth-buttonorange.contentWidth/2)
-buttonorange.y=math.random(title.y+title.contentWidth/2, (display.contentHeight - display.viewableContentHeight)/2+display.viewableContentHeight - buttonorange.contentWidth/2)
+buttonorange.x=math.random(buttonorange.contentWidth/2+display.viewableContentWidth/2,  display.viewableContentWidth-buttonorange.contentWidth/2)
+buttonorange.y=math.random(title.y+title.contentHeight/2+display.contentHeight/2, (display.contentHeight - display.viewableContentHeight)/2+display.viewableContentHeight - buttonorange.contentHeight/2)
 localGroup:insert(buttonorange)
 
 

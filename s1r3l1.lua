@@ -20,7 +20,7 @@ local background=display.newImage("image/bg.png")
 localGroup:insert(background)
 	
 	
-local title=display.newText("Touch the green button of 5 times", 50, 20, native.systemFont, 19 ) 
+local title=display.newText("Дотронься до зеленой кнопки пять раз", 50, 20, native.systemFont, 19 ) 
 title.x= title.contentWidth/2
 title.y= (display.contentHeight - display.viewableContentHeight)/2 + title.contentHeight*1/2
 title:setTextColor ( 50, 50, 255)

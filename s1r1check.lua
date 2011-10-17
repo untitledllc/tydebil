@@ -17,16 +17,17 @@ background.xScale = display.contentWidth/background.contentWidth
 background.yScale = display.contentHeight/background.contentHeight
 localGroup:insert(background)
 
-local pic1 = display.newImage ("image\\checkpoint\\very_good.jpg",0  ,0 )
+local pic1 = display.newImage ("image/checkpoint/very_good.jpg",0  ,0 )
 pic1.xScale = 2
 pic1.yScale = 2  
 pic1.x= display.viewableContentWidth/2
 pic1.y= ( display.contentHeight - display.viewableContentHeight)/2 + display.viewableContentHeight/2 - pic1.contentHeight 
 localGroup:insert(pic1)
 
-local pic2 = display.newImage ("image\\checkpoint\\сheckpoint.png",0  ,0 )  -- почемуто не отображается ???? Бред
-pic2.xScale = 2
-pic2.yScale = 2
+local pic2 = display.newText( "Checkpoint " , 0, 0, native.systemFont, 24 ) -----------display.newImage ("image/checkpoint/сheckpoint.png",0  ,0 )  -- почемуто не отображается ???? Бред
+--pic2.xScale = 2
+--pic2.yScale = 2
+pic2:setTextColor(2550,0,0)
 pic2.x= display.viewableContentWidth/2 
 pic2.y = ( display.contentHeight - display.viewableContentHeight)/2 + pic2.contentHeight/2 
 localGroup:insert(pic2)

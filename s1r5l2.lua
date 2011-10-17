@@ -30,14 +30,14 @@ localGroup:insert(pic3)
 local flag = false -- стоп флаг
 local function  TheEndStop() flag = true end   -- меняем стоп флаг 
 local function TheEnd()
-if flag == false then director:changeScene("s1r5l3") end -- если стоп флаг фолсе, то след левл
+if flag == false then director:changeScene("s1r5l61") end -- если стоп флаг фолсе, то след левл
 end
 
 local clockTimer = timer.performWithDelay( 8000, TheEnd, 1 ) 
 local function done(event)
 if event.phase=="ended" then 	 
 	  timer.performWithDelay( 1, TheEndStop, 1 ) -- "останавливаем" счетчик
-       director:changeScene("fail") 
+       director:changeScene("section1") 
 end
 end 
 
