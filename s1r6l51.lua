@@ -6,8 +6,12 @@ module (..., package.seeall )
 function new()
 	local localGroup=display.newGroup ( )
 	stack.timeStop()
-	
-	if stack.BestTime > stack.times or stack.BestTime == 0 then stack.BestTime = stack.times end
+	print (stack.BestTime )
+	if stack.BestTime*10 > stack.times*10 or stack.BestTime*10 == 0 then 
+	stack.BestTime = stack.times
+	print ("write to fail\n stack.BestTime "..stack.BestTime)
+	stack.SaveBestTime ()
+	end
 	
 local background=display.newImage("image/bg.png")
   background.x= display.viewableContentWidth/2
@@ -15,6 +19,8 @@ local background=display.newImage("image/bg.png")
     background.xScale = display.viewableContentWidth/background.contentWidth 
     background.yScale = display.viewableContentHeight/background.contentHeight
 localGroup:insert(background)
+	
+	print ("pop")
 	
 local title=display.newText("Поздравляю.Секция пройдена.", 50, 20, native.systemFont, 17 ) 
 title.x = display.contentWidth/2

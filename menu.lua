@@ -1,4 +1,5 @@
 module(..., package.seeall)
+local stack=require("stack")
 
 function new()
 	local localGroup = display.newGroup()

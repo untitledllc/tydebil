@@ -3,16 +3,12 @@ module (..., package.seeall)
 
 function new ()
 local localGroup = display.newGroup()
-
-
 stack.checkPointWindow="s1r1check" -- Записали в кучу
 print(stack.checkPointWindow)
-
 
 local background = display.newImage ("image\\bg.png",0  ,0 )  
 background.x= display.viewableContentWidth/2
 background.y= display.viewableContentHeight/2
-
 background.xScale = display.contentWidth/background.contentWidth 
 background.yScale = display.contentHeight/background.contentHeight
 localGroup:insert(background)
@@ -25,8 +21,6 @@ pic1.y= ( display.contentHeight - display.viewableContentHeight)/2 + display.vie
 localGroup:insert(pic1)
 
 local pic2 = display.newText( "Checkpoint " , 0, 0, native.systemFont, 24 ) -----------display.newImage ("image/checkpoint/сheckpoint.png",0  ,0 )  -- почемуто не отображается ???? Бред
---pic2.xScale = 2
---pic2.yScale = 2
 pic2:setTextColor(2550,0,0)
 pic2.x= display.viewableContentWidth/2 
 pic2.y = ( display.contentHeight - display.viewableContentHeight)/2 + pic2.contentHeight/2 
@@ -63,7 +57,9 @@ localGroup:insert(bee)
 
 local function touchbee(event)
 if event.phase=="ended" then
+ --image.parent: remove ( image )
 	director:changeScene("s1r2l1")
+	bee.parent: remove (bee)
 end
 end
 

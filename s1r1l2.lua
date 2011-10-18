@@ -77,8 +77,7 @@ if event.phase == "ended" then
 	flag = true
    end
  
- if event.x < sun.x + sun.contentWidth and event.x > sun.x - sun.contentWidth   -- солнце
-  and event.y < sun.y + sun.contentHeight and event.y > sun.y - sun.contentHeight
+ if (event.x - sun.x)^2 + (event.y - sun.y)^2 < (sun.contentWidth/2)^2
   and flag == false and earth.isVisible==false and sun.isVisible==true
    then
     title2.isVisible=false
@@ -87,8 +86,8 @@ if event.phase == "ended" then
 	flag = true
    end
  
- if event.x < up.x + up.contentWidth and event.x > up.x - up.contentWidth   -- планета
-  and event.y < up.y + up.contentHeight and event.y > up.y - up.contentHeight
+ if event.x < up.x + up.contentWidth*0.5 and event.x > up.x - up.contentWidth*0.5   -- планета
+  and event.y < up.y + up.contentHeight*0.5 and event.y > up.y - up.contentHeight*0.5
   and flag == false and earth.isVisible==false
    then
 	flag = true

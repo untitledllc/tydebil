@@ -32,24 +32,24 @@ localGroup:insert(title)
 
 local buttonred=display.newImage("image/level1/red.png")
 buttonred.x=math.random(buttonred.contentWidth/2,  display.viewableContentWidth/2-buttonred.contentWidth/2)
-buttonred.y=math.random(title.y+title.contentHeight/2,  display.contentHeight/2 +display.viewableContentHeight/4 - buttonred.contentWidth/2)
+buttonred.y=math.random(title.y+title.contentHeight/2+buttonred.contentWidth/2,  display.contentHeight/2  - buttonred.contentWidth/2)
 localGroup:insert(buttonred)
 
 local buttonblue=display.newImage("image/level1/blue.png")
 buttonblue.x=math.random(buttonblue.contentWidth/2,  display.viewableContentWidth/2-buttonblue.contentWidth/2)
-buttonblue.y=math.random(title.y+title.contentHeight/2+display.viewableContentHeight/4,  display.contentHeight/2 +display.viewableContentHeight/2 - buttonblue.contentWidth/2)
+buttonblue.y=math.random(title.y+title.contentHeight/2+display.viewableContentHeight/2,  display.contentHeight/2 +display.viewableContentHeight/2 - buttonblue.contentWidth/2)
 localGroup:insert(buttonblue)
 
 
 local buttongreen=display.newImage("image/level1/green.png")
 buttongreen.x=math.random(buttongreen.contentWidth/2+display.viewableContentWidth/2,  display.viewableContentWidth-buttongreen.contentWidth/2)
-buttongreen.y=math.random(title.y+title.contentHeight/2, display.contentHeight/2 +display.viewableContentHeight/4 - buttongreen.contentWidth/2)
+buttongreen.y=math.random(title.y+title.contentHeight/2+buttongreen.contentWidth/2, display.contentHeight/2  - buttongreen.contentWidth/2)
 localGroup:insert(buttongreen)
 
 
 local buttonorange=display.newImage("image/level1/orange.png")
 buttonorange.x=math.random(buttonorange.contentWidth/2+display.viewableContentWidth/2,  display.viewableContentWidth-buttonorange.contentWidth/2)
-buttonorange.y=math.random(title.y+title.contentHeight/2+display.viewableContentHeight/4, display.contentHeight/2 +display.viewableContentHeight/2 - buttonorange.contentWidth/2)
+buttonorange.y=math.random(title.y+title.contentHeight/2+display.viewableContentHeight/2, display.contentHeight/2 +display.viewableContentHeight/2 - buttonorange.contentWidth/2)
 localGroup:insert(buttonorange)
 
 	local red=false
