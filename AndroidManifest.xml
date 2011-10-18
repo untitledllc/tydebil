@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0" android:installLocation="auto" package="PUT_YOUR_PACKAGE_IDENTIFIER_HERE"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.NFC" />
+	<uses-permission android:name="android.permission.INSTALL_LOCATION_PROVIDER"" />
+    <uses-feature android:glEsVersion="65537" />
+    <application android:label="TiDebil" android:icon="@drawable/icon" android:debuggable="true">
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:label="TiDebil?" android:name="com.ansca.corona.CoronaActivity" android:launchMode="singleTask" android:screenOrientation="landscapeRight">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider android:name="com.ansca.corona.FileContentProvider" android:authorities="YOUR_PACKAGE_IDENTIFIER.files" />
+        <activity android:theme="@style/OFNestedWindow" android:label="IntroFlow" android:name="com.openfeint.internal.ui.IntroFlow" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/OFNestedWindow" android:label="Dashboard" android:name="com.openfeint.api.ui.Dashboard" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/OFNestedWindow" android:label="Settings" android:name="com.openfeint.internal.ui.Settings" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/OFNestedWindow" android:label="NativeBrowser" android:name="com.openfeint.internal.ui.NativeBrowser" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.adknowledge.superrewards.ui.activities.SRPaymentMethodsActivity" android:screenOrientation="landscapeRight" />
+        <activity android:name="com.adknowledge.superrewards.ui.activities.SRDirectPaymentActivity" android:screenOrientation="landscapeRight" />
+        <activity android:name="com.adknowledge.superrewards.ui.activities.SROfferPaymentActivity" android:screenOrientation="landscapeRight" />
+        <activity android:name="com.adknowledge.superrewards.ui.activities.SRWebViewActivity" android:screenOrientation="landscapeRight" />
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="com.zong.android.engine.web.ZongWebView" android:screenOrientation="landscapeRight">
+            <intent-filter>
+                <action android:name="com.adknowledge.superrewards.ui.activities.SRZongPaymentActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service />
+    </application>
+</manifest>

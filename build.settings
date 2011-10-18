@@ -3,15 +3,13 @@ settings = {
 	{
 		default = "landscapeRight",		supported =
                 {
-                        "landscapeLeft", "landscapeRight"
+                        "landscapeRight"
                 },
 	},
-	iphone =
-	{
-		plist=
-		{
-			UIStatusBarHidden=true,
-			UIApplicationExitsOnSuspend = true
-		},
-	},
+
+	android =
+        {
+                versionCode = "2"
+        },
+	
 }
